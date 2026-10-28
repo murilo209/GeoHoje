@@ -1,0 +1,106 @@
+/* GeoHoje — jornal científico antigo */
+:root{--papel:#eadfc3;--papel2:#f2eada;--tinta:#1c1812;--marrom:#4a2f1a;--musgo:#4b5a2c;--linha:#b8a67f;--ocre:#a8742f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+body{background:var(--papel);background-image:radial-gradient(rgba(74,47,26,.07) 1px,transparent 1px);background-size:5px 5px;color:var(--tinta);font:1.075rem/1.75 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.marca{font-family:"Playfair Display",Georgia,serif;color:var(--marrom);line-height:1.15}
+a{color:var(--musgo)}
+:focus-visible{outline:3px solid var(--ocre);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+svg.ilu{display:block;width:100%;height:auto}
+
+/* Cabeçalho */
+.topo{position:sticky;top:0;z-index:10;background:var(--papel2);border-bottom:3px double var(--marrom)}
+.topo .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-top:.8rem;padding-bottom:.8rem}
+.marca{font-size:2rem;font-weight:900;text-decoration:none;letter-spacing:.01em}
+.marca small{display:block;font:italic 400 .95rem "Source Serif 4",Georgia,serif;color:var(--musgo)}
+nav ul{display:flex;gap:1.6rem;list-style:none}
+nav a{font-family:"Playfair Display",Georgia,serif;font-weight:700;color:var(--marrom);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--ocre)}
+
+/* Destaque */
+.hero{padding:5.5rem 0 4.5rem;text-align:center;border-bottom:1px solid var(--linha)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:15ch;margin:0 auto 1.5rem;font-weight:900}
+.hero p{max-width:56ch;margin:0 auto 2.2rem;font-size:1.2rem}
+.hero .selo{width:64px;margin:0 auto 1.8rem;color:var(--musgo)}
+.btn{display:inline-block;padding:.75rem 1.6rem;font:700 1rem "Playfair Display",Georgia,serif;text-decoration:none;color:var(--papel2);background:var(--musgo);border:2px solid var(--marrom);box-shadow:4px 4px 0 var(--marrom);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--marrom)}
+
+/* Seções */
+.secao{padding:4.5rem 0}
+.titulo-secao{font-size:2.2rem;text-align:center;margin-bottom:.6rem}
+.sub{text-align:center;color:var(--musgo);font-style:italic;margin-bottom:3rem}
+.regra{border:0;border-top:3px double var(--linha);margin:0 auto;max-width:1080px}
+
+/* Cartões */
+.cartoes{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.cartao{display:flex;flex-direction:column;background:var(--papel2);border:1px solid var(--linha);outline:1px solid var(--linha);outline-offset:-7px;padding:1.4rem}
+.cartao .ilu{background:var(--marrom);padding:.8rem;margin-bottom:1.1rem;height:190px;width:100%}
+.cat{font-style:italic;color:var(--musgo);font-size:.95rem}
+.cartao h3{font-size:1.5rem;margin:.2rem 0 .6rem}
+.cartao p{flex:1;margin-bottom:1.2rem;font-size:1rem;line-height:1.6}
+.cartao .btn{align-self:flex-start;font-size:.92rem;padding:.55rem 1.1rem;box-shadow:3px 3px 0 var(--marrom)}
+
+/* Artigos completos */
+.artigo{padding:4.5rem 0;border-top:1px solid var(--linha)}
+.cab-artigo{display:flex;align-items:baseline;gap:1.2rem;border-bottom:2px solid var(--marrom);padding-bottom:.8rem;margin-bottom:2.2rem}
+.num{font:900 4.2rem/1 "Playfair Display",Georgia,serif;color:var(--ocre)}
+.cab-artigo h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.corpo{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:2.8rem;align-items:start}
+.texto p{margin-bottom:1.15rem;max-width:68ch}
+.texto h3{font-size:1.35rem;margin:1.8rem 0 .5rem}
+.texto>p:first-of-type::first-letter{float:left;font:900 4rem/.85 "Playfair Display",Georgia,serif;color:var(--musgo);padding:.3rem .5rem 0 0}
+.lateral{display:grid;gap:1.6rem;position:sticky;top:6.5rem}
+figure{background:var(--papel2);border:1px solid var(--linha);padding:.8rem}
+figure .ilu{background:var(--marrom);padding:.6rem}
+figcaption{font-size:.88rem;line-height:1.5;font-style:italic;margin-top:.6rem;color:var(--marrom)}
+.quadro{border:2px solid var(--musgo);outline:1px solid var(--musgo);outline-offset:3px;padding:1.1rem 1.2rem;background:var(--papel2);font-size:.97rem;line-height:1.6}
+.quadro h4{font:700 1.1rem "Playfair Display",Georgia,serif;color:var(--musgo);margin-bottom:.4rem}
+.voltar{display:inline-block;margin-top:.5rem;font-size:.95rem}
+
+/* Sobre e rodapé */
+.sobre{background:var(--papel2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.sobre .wrap{max-width:760px;text-align:center}
+.sobre p{margin-top:1.1rem}
+footer{background:var(--marrom);color:var(--papel);text-align:center;padding:2.8rem 1.5rem}
+footer .marca{color:var(--papel2);font-size:1.7rem}
+footer p{margin-top:.5rem;font-style:italic}
+
+@media(max-width:900px){
+.cartoes{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+.corpo{grid-template-columns:1fr}
+.lateral{position:static}
+}
+@media(max-width:560px){
+.topo .wrap{justify-content:center;text-align:center}
+nav ul{gap:1.2rem}
+.hero{padding:3.5rem 0 3rem}
+.num{font-size:3rem}
+.cab-artigo{gap:.8rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+/* Datas e figuras dentro dos textos */
+.data{display:block;font-style:italic;font-size:.92rem;color:var(--ocre)}
+.cartao .data{margin:-.3rem 0 .6rem}
+.cab-artigo{margin-bottom:.8rem}
+.cab-artigo+.data{margin-bottom:2.2rem}
+.texto figure.inline{max-width:68ch;margin:1.8rem 0 1.6rem}
+
+/* Fotos reais em estilo de impressão antiga */
+.cartao img.foto{display:block;width:100%;height:190px;object-fit:cover;margin-bottom:1.1rem;border:1px solid var(--marrom)}
+figure img,.cartao img.foto{filter:sepia(.55) contrast(1.06) saturate(.85);mix-blend-mode:multiply}
+.texto figure.inline img{display:block;width:100%;height:auto}
+figcaption a{color:var(--musgo)}
+
+/* Fundo de jornal antigo: papel amarelado, ruído, colunas de texto apagadas e bordas queimadas */
+body{background-color:#d8c597;background-image:
+radial-gradient(ellipse at 50% 0%,rgba(255,247,214,.55),transparent 55%),
+radial-gradient(ellipse at 50% 50%,transparent 50%,rgba(95,55,18,.38) 100%),
+url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32 0 0 0 0 .2 0 0 0 0 .08 0 0 0 .26 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+repeating-linear-gradient(0deg,rgba(45,30,15,.09) 0 2px,transparent 2px 9px),
+linear-gradient(90deg,transparent calc(100% - 1px),rgba(45,30,15,.16) 0);
+background-size:100% 100%,100% 100%,240px 240px,auto,230px 100%;
+background-attachment:fixed,fixed,scroll,scroll,scroll}
+main{max-width:1180px;margin:0 auto;background:rgba(240,229,196,.9);border-inline:1px solid var(--linha);box-shadow:0 0 50px rgba(70,40,10,.3)}
+@media(max-width:700px){body{background-attachment:scroll}}
